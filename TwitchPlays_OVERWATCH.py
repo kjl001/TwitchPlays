@@ -5,6 +5,7 @@ import pydirectinput
 import pyautogui
 import TwitchPlays_Connection
 from TwitchPlays_KeyCodes import *
+import DetectImage.py
 
 ##################### GAME VARIABLES #####################
 
@@ -78,6 +79,18 @@ def handle_message(message):
         # This is just for soldier 76
         ###################################
 
+        # HERO SPECIFIC ABILITIES
+        if msg == "run":
+            HoldKey(LEFT_SHIFT)
+            HoldKey(W)
+        if msg == "heal":
+            HoldAndReleaseKey(E, 1)
+        if msg == "rocket":
+            pydirectinput.mouseDown(button="right")
+            time.sleep(0.5)
+            pydirectinput.mouseUp(button="right")
+
+
         # If the chat message is "left", then hold down the A key for 2 seconds
         if msg == "left": 
             HoldAndReleaseKey(A, 2)
@@ -96,20 +109,8 @@ def handle_message(message):
             ReleaseKey(W) #release drive key first
             HoldKey(S) #start permanently reversing
 
-        if msg == "run":
-            HoldKey(LEFT_SHIFT)
-            HoldKey(W)
-
-        if msg == "heal":
-            HoldAndReleaseKey(E, 1)
-
         if msg in ["ult", "ultimate"]:
             HoldAndReleaseKey(Q, 1)
-
-        if msg == "rocket":
-            pydirectinput.mouseDown(button="right")
-            time.sleep(0.5)
-            pydirectinput.mouseUp(button="right")
 
         if msg == "jump":
             HoldAndReleaseKey(SPACE, 1)
@@ -136,10 +137,6 @@ def handle_message(message):
             ReleaseKey(S)
             ReleaseKey(LEFT_SHIFT)
 
-        # Press the spacebar for 0.7 seconds
-        if msg == "brake": 
-            HoldAndReleaseKey(SPACE, 0.7)
-
         # Press the left mouse button down for 1 second, then release it
         if msg == "shoot": 
             pydirectinput.mouseDown(button="left")
@@ -155,31 +152,35 @@ def handle_message(message):
         if msg == "punch":
             HoldAndReleaseKey(J, 1)
 
-        # Move the mouse up by 30 pixels
+        # Aim the mouse by a little bit
         if msg == "aim up":
             pydirectinput.moveRel(0, -150, relative=True)
-
-        if msg == "look up":
-            pydirectinput.moveRel(0, -600, relative=True)
-
         if msg == "aim down":
             pydirectinput.moveRel(0, 150, relative=True)
-
-        if msg == "look down":
-            pydirectinput.moveRel(0, 600, relative=True)
-
-        # Move the mouse right by 200 pixels
         if msg == "aim right":
             pydirectinput.moveRel(150, 0, relative=True)
-
-        if msg == "look right":
-            pydirectinput.moveRel(600, 0, relative=True)
-
         if msg == "aim left":
             pydirectinput.moveRel(-150, 0, relative=True)
 
+        # Look the camera around at a 45 degree angle-ish
+        if msg == "look up":
+            pydirectinput.moveRel(0, -600, relative=True)
+        if msg == "look down":
+            pydirectinput.moveRel(0, 600, relative=True)
+        if msg == "look right":
+            pydirectinput.moveRel(1500, 0, relative=True)
         if msg == "look left":
-            pydirectinput.moveRel(-600, 0, relative=True)
+            pydirectinput.moveRel(-1500, 0, relative=True)
+
+        # Turn completely around
+        if msg == "turn around":
+            pydirectinput.moveRel(6000, 0, relative=True)
+
+        # Turn 90 degrees-ish
+        if msg == "turn right":
+            pydirectinput.moveRel(3000, 0, relative=True)
+        if msg == "turn left":
+            pydirectinput.moveRel(-3000, 0, relative=True)
 
         ####################################
         ####################################
