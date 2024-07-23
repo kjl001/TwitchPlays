@@ -591,3 +591,54 @@ def torbjorn():
         pydirectinput.mouseDown(button="left")
         time.sleep(2)
         pydirectinput.mouseUp(button="left")
+
+def tracer():
+    # This is the LEFT_SHIFT ability
+    if msg in ["ab1", "shift"]:
+        HoldAndReleaseKey(LEFT_SHIFT, 0.5)
+    # This is the E ability
+    if msg in ["ab2", "e"]:
+        HoldAndReleaseKey(E, 0.5)
+    # This is the RIGHT CLICK ability
+    if msg in ["ab3", "right click"]:
+        pydirectinput.mouseDown(button="right")
+        time.sleep(0.5)
+        pydirectinput.mouseUp(button="right")
+    # Press the left mouse button down for 1 second, then release it
+    if msg == "shoot": 
+        pydirectinput.mouseDown(button="left")
+        time.sleep(2)
+        pydirectinput.mouseUp(button="left")
+
+def venture():
+    # This is the LEFT_SHIFT ability
+    if msg in ["ab1", "shift"]:
+        HoldAndReleaseKey(LEFT_SHIFT, 0.5)
+    # This is the RIGHT CLICK ability
+    if msg in ["ab3", "right click"]:
+        pydirectinput.mouseDown(button="right")
+        time.sleep(0.5)
+        pydirectinput.mouseUp(button="right")
+    # Press the left mouse button down for 1 second, then release it
+    if msg == "shoot": 
+        pydirectinput.mouseDown(button="left")
+        time.sleep(2)
+        pydirectinput.mouseUp(button="left")
+
+def widowmaker():
+    # This is the LEFT_SHIFT ability
+    if msg in ["ab1", "shift"]:
+        HoldAndReleaseKey(LEFT_SHIFT, 0.5)
+    # This is the E ability
+    if msg in ["ab2", "e"]:
+        HoldAndReleaseKey(E, 0.5)
+    # This is the RIGHT CLICK ability
+    if msg == "aim down":
+        pydirectinput.mouseDown(button="right")
+    if msg == "aim out":
+        pydirectinput.mouseUp(button="right")
+    # Press the left mouse button down for 1 second, then release it
+    if msg == "shoot": 
+        pydirectinput.mouseDown(button="left")
+        time.sleep(2)
+        pydirectinput.mouseUp(button="left")
