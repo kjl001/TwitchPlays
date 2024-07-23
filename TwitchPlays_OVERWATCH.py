@@ -99,10 +99,6 @@ def handle_message(message):
         }
 
         global hero
-        if msg == "swap":
-            hero = DI.getHero()
-            print("HERO SWAPPED: " + hero)
-
         if hero in control_map:
             control_map[hero](msg)
             HC.lookAround(msg)
@@ -144,6 +140,12 @@ while True:
     # If user presses Shift+Backspace, automatically end the program
     if keyboard.is_pressed('shift+backspace'):
         exit()
+
+    # When END is pressed, check what hero is being played and swap
+    global hero
+    if keyboard.is_pressed("end"):
+        hero = DI.getHero()
+        print("HERO SWAPPED: " + hero)
 
     if not messages_to_handle:
         continue
