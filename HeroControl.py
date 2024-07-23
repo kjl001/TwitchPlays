@@ -3,7 +3,7 @@ import keyboard
 import pydirectinput
 import pyautogui
 
-def moveAround():
+def moveAround(msg):
     # If the chat message is "left", then hold down the A key for 2 seconds
     if msg == "left": 
         HoldAndReleaseKey(A, 2)
@@ -62,7 +62,7 @@ def moveAround():
     if msg == "interact"
         HoldAndReleaseKey(G, 1)
 
-def lookAround():
+def lookAround(msg):
     # Aim the mouse by a little bit
     if msg == "aim up":
         pydirectinput.moveRel(0, -150, relative=True)
@@ -98,7 +98,7 @@ def lookAround():
 ######################################
 # TANK HEROES
 ######################################
-def dva():
+def dva(msg):
     # This is the LEFT_SHIFT ability
     if msg in ["ab1", "shift"]:
         HoldAndReleaseKey(LEFT_SHIFT, 3)
@@ -116,7 +116,7 @@ def dva():
         time.sleep(2)
         pydirectinput.mouseUp(button="left")
 
-def doomfist():
+def doomfist(msg):
     # This is the LEFT_SHIFT ability
     if msg in ["ab1", "shift"]:
         HoldAndReleaseKey(LEFT_SHIFT, 1)
@@ -134,7 +134,7 @@ def doomfist():
         time.sleep(2)
         pydirectinput.mouseUp(button="left")
 
-def junkerqueen():
+def junkerqueen(msg):
     # This is the LEFT_SHIFT ability
     if msg in ["ab1", "shift"]:
         HoldAndReleaseKey(LEFT_SHIFT, 1)
@@ -152,7 +152,7 @@ def junkerqueen():
         time.sleep(1)
         pydirectinput.mouseUp(button="left")
 
-def mauga():
+def mauga(msg):
     # This is the LEFT_SHIFT ability
     if msg in ["ab1", "shift"]:
         HoldAndReleaseKey(LEFT_SHIFT, 0.5)
@@ -167,7 +167,7 @@ def mauga():
         pydirectinput.mouseUp(button="left")
         pydirectinput.mouseUp(button="right")
 
-def orisa():
+def orisa(msg):
     # This is the LEFT_SHIFT ability
     if msg in ["ab1", "shift"]:
         HoldAndReleaseKey(LEFT_SHIFT, 0.5)
@@ -185,7 +185,7 @@ def orisa():
         time.sleep(2)
         pydirectinput.mouseUp(button="left")
 
-def ramattra():
+def ramattra(msg):
     # This is the LEFT_SHIFT ability
     if msg in ["ab1", "shift"]:
         HoldAndReleaseKey(LEFT_SHIFT, 0.5)
@@ -208,7 +208,7 @@ def ramattra():
         time.sleep(2)
         pydirectinput.mouseUp(button="right")
 
-def reinhardt():
+def reinhardt(msg):
     # This is the LEFT_SHIFT ability
     if msg in ["ab1", "shift"]:
         HoldAndReleaseKey(LEFT_SHIFT, 0.5)
@@ -226,7 +226,7 @@ def reinhardt():
         time.sleep(2)
         pydirectinput.mouseUp(button="left")
 
-def roadhog():
+def roadhog(msg):
     # This is the LEFT_SHIFT ability
     if msg in ["ab1", "shift"]:
         HoldAndReleaseKey(LEFT_SHIFT, 0.5)
@@ -244,7 +244,7 @@ def roadhog():
         time.sleep(2)
         pydirectinput.mouseUp(button="left")
 
-def sigma():
+def sigma(msg):
     # This is the LEFT_SHIFT ability
     if msg in ["ab1", "shift"]:
         HoldAndReleaseKey(LEFT_SHIFT, 0.5)
@@ -262,7 +262,7 @@ def sigma():
         time.sleep(2)
         pydirectinput.mouseUp(button="left")
 
-def winston():
+def winston(msg):
     # This is the LEFT_SHIFT ability
     if msg in ["ab1", "shift"]:
         HoldAndReleaseKey(LEFT_SHIFT, 0.5)
@@ -280,7 +280,7 @@ def winston():
         time.sleep(2)
         pydirectinput.mouseUp(button="left")
 
-def wreckingball():
+def wreckingball(msg):
     # This is the LEFT_SHIFT ability
     if msg in ["ab1", "shift"]:
         HoldAndReleaseKey(LEFT_SHIFT, 0.5)
@@ -298,7 +298,7 @@ def wreckingball():
         time.sleep(2)
         pydirectinput.mouseUp(button="left")
 
-def zarya():
+def zarya(msg):
     # This is the LEFT_SHIFT ability
     if msg in ["ab1", "shift"]:
         HoldAndReleaseKey(LEFT_SHIFT, 0.5)
@@ -320,7 +320,7 @@ def zarya():
 ######################################
 # DAMAGE HEROES
 ######################################
-def ashe():
+def ashe(msg):
     # This is the LEFT_SHIFT ability
     if msg in ["ab1", "shift"]:
         HoldAndReleaseKey(LEFT_SHIFT, 0.5)
@@ -338,7 +338,7 @@ def ashe():
         time.sleep(2)
         pydirectinput.mouseUp(button="left")
 
-def bastion():
+def bastion(msg):
     # This is the LEFT_SHIFT ability
     if msg in ["ab1", "shift"]:
         HoldAndReleaseKey(LEFT_SHIFT, 0.5)
@@ -353,7 +353,7 @@ def bastion():
         time.sleep(2)
         pydirectinput.mouseUp(button="left")
 
-def cassidy():
+def cassidy(msg):
     # This is the LEFT_SHIFT ability
     if msg in ["ab1", "shift"]:
         HoldAndReleaseKey(LEFT_SHIFT, 0.5)
@@ -371,7 +371,7 @@ def cassidy():
         time.sleep(1)
         pydirectinput.mouseUp(button="left")
 
-def echo():
+def echo(msg):
     # This is the LEFT_SHIFT ability
     if msg in ["ab1", "shift"]:
         HoldAndReleaseKey(LEFT_SHIFT, 0.5)
@@ -389,7 +389,7 @@ def echo():
         time.sleep(1.5)
         pydirectinput.mouseUp(button="left")
 
-def genji():
+def genji(msg):
     # This is the LEFT_SHIFT ability
     if msg in ["ab1", "shift"]:
         HoldAndReleaseKey(LEFT_SHIFT, 0.5)
@@ -410,7 +410,7 @@ def genji():
         HoldAndReleaseKey(SPACE, 0.5)
         HoldAndReleaseKey(SPACE, 0.5)
 
-def hanzo():
+def hanzo(msg):
     # This is the LEFT_SHIFT ability
     if msg in ["ab1", "shift"]:
         HoldAndReleaseKey(LEFT_SHIFT, 0.5)
@@ -429,7 +429,7 @@ def hanzo():
         time.sleep(2)
         pydirectinput.mouseUp(button="left")
 
-def junkrat():
+def junkrat(msg):
     # This is the LEFT_SHIFT ability
     if msg in ["ab1", "shift"]:
         HoldAndReleaseKey(LEFT_SHIFT, 0.5)
@@ -447,7 +447,7 @@ def junkrat():
         time.sleep(2)
         pydirectinput.mouseUp(button="left")
 
-def mei():
+def mei(msg):
     # This is the LEFT_SHIFT ability
     if msg in ["ab1", "shift"]:
         HoldAndReleaseKey(LEFT_SHIFT, 0.5)
@@ -465,7 +465,7 @@ def mei():
         time.sleep(2)
         pydirectinput.mouseUp(button="left")
 
-def pharah():
+def pharah(msg):
     # This is the LEFT_SHIFT ability
     if msg in ["ab1", "shift"]:
         HoldAndReleaseKey(LEFT_SHIFT, 0.5)
@@ -486,7 +486,7 @@ def pharah():
     if msg == "fly":
         HoldAndReleaseKey(SPACE, 3)
 
-def reaper():
+def reaper(msg):
     # This is the LEFT_SHIFT ability
     if msg in ["ab1", "shift"]:
         HoldAndReleaseKey(LEFT_SHIFT, 0.5)
@@ -504,7 +504,7 @@ def reaper():
         time.sleep(2)
         pydirectinput.mouseUp(button="left")
 
-def sojourn():
+def sojourn(msg):
     # This is the LEFT_SHIFT ability
     if msg in ["ab1", "shift"]:
         HoldAndReleaseKey(LEFT_SHIFT, 0.5)
@@ -522,7 +522,7 @@ def sojourn():
         time.sleep(2)
         pydirectinput.mouseUp(button="left")
 
-def soldier():
+def soldier(msg):
     # This is the LEFT_SHIFT ability
     if msg in ["ab1", "shift", "run"]:
         HoldKey(SHIFT)
@@ -541,7 +541,7 @@ def soldier():
         time.sleep(2)
         pydirectinput.mouseUp(button="left")
 
-def sombra():
+def sombra(msg):
     # This is the LEFT_SHIFT ability
     if msg in ["ab1", "shift"]:
         HoldAndReleaseKey(LEFT_SHIFT, 1.5)
@@ -559,7 +559,7 @@ def sombra():
         time.sleep(2)
         pydirectinput.mouseUp(button="left")
 
-def symmetra():
+def symmetra(msg):
     # This is the LEFT_SHIFT ability
     if msg in ["ab1", "shift"]:
         HoldAndReleaseKey(LEFT_SHIFT, 0.5)
@@ -577,7 +577,7 @@ def symmetra():
         time.sleep(2)
         pydirectinput.mouseUp(button="left")
 
-def torbjorn():
+def torbjorn(msg):
     # This is the LEFT_SHIFT ability
     if msg in ["ab1", "shift"]:
         HoldAndReleaseKey(LEFT_SHIFT, 0.5)
@@ -595,7 +595,7 @@ def torbjorn():
         time.sleep(2)
         pydirectinput.mouseUp(button="left")
 
-def tracer():
+def tracer(msg):
     # This is the LEFT_SHIFT ability
     if msg in ["ab1", "shift"]:
         HoldAndReleaseKey(LEFT_SHIFT, 0.5)
@@ -613,7 +613,7 @@ def tracer():
         time.sleep(2)
         pydirectinput.mouseUp(button="left")
 
-def venture():
+def venture(msg):
     # This is the LEFT_SHIFT ability
     if msg in ["ab1", "shift"]:
         HoldAndReleaseKey(LEFT_SHIFT, 0.5)
@@ -628,7 +628,7 @@ def venture():
         time.sleep(2)
         pydirectinput.mouseUp(button="left")
 
-def widowmaker():
+def widowmaker(msg):
     # This is the LEFT_SHIFT ability
     if msg in ["ab1", "shift"]:
         HoldAndReleaseKey(LEFT_SHIFT, 0.5)
@@ -651,7 +651,7 @@ def widowmaker():
 ######################################
 # SUPPORT HEROES
 ######################################
-def ana():
+def ana(msg):
     # This is the LEFT_SHIFT ability
     if msg in ["ab1", "shift"]:
         HoldAndReleaseKey(LEFT_SHIFT, 0.5)
@@ -669,7 +669,7 @@ def ana():
         time.sleep(2)
         pydirectinput.mouseUp(button="left")
 
-def baptiste():
+def baptiste(msg):
     # This is the LEFT_SHIFT ability
     if msg in ["ab1", "shift"]:
         HoldAndReleaseKey(LEFT_SHIFT, 0.5)
@@ -691,7 +691,7 @@ def baptiste():
         HoldAndReleaseKey(LEFT_CONTROL, 1.5)
         HoldAndReleaseKey(SPACE, 0.5)
 
-def brigitte():
+def brigitte(msg):
     # This is the LEFT_SHIFT ability
     if msg in ["ab1", "shift"]:
         HoldAndReleaseKey(LEFT_SHIFT, 0.5)
@@ -714,7 +714,7 @@ def brigitte():
     if msg == "shield down":
         pydirectinput.mouseUp(button="right")
 
-def illari():
+def illari(msg):
     # This is the LEFT_SHIFT ability
     if msg in ["ab1", "shift"]:
         HoldAndReleaseKey(LEFT_SHIFT, 0.5)
@@ -732,7 +732,7 @@ def illari():
         time.sleep(2)
         pydirectinput.mouseUp(button="left")
 
-def kiriko():
+def kiriko(msg):
     # This is the LEFT_SHIFT ability
     if msg in ["ab1", "shift"]:
         HoldAndReleaseKey(LEFT_SHIFT, 0.5)
@@ -750,7 +750,7 @@ def kiriko():
         time.sleep(2)
         pydirectinput.mouseUp(button="left")
 
-def lifeweaver():
+def lifeweaver(msg):
     # This is the LEFT_SHIFT ability
     if msg in ["ab1", "shift"]:
         HoldAndReleaseKey(LEFT_SHIFT, 0.5)
@@ -771,7 +771,7 @@ def lifeweaver():
         HoldAndReleaseKey(SPACE, 0.5)
         HoldAndReleaseKey(SPACE, 0.5)
 
-def lucio():
+def lucio(msg):
     # This is the LEFT_SHIFT ability
     if msg in ["ab1", "shift"]:
         HoldAndReleaseKey(LEFT_SHIFT, 0.5)
@@ -789,7 +789,7 @@ def lucio():
         time.sleep(2)
         pydirectinput.mouseUp(button="left")
 
-def mercy():
+def mercy(msg):
     # This is the LEFT_SHIFT ability
     if msg in ["ab1", "shift"]:
         HoldAndReleaseKey(LEFT_SHIFT, 0.5)
@@ -807,7 +807,7 @@ def mercy():
         time.sleep(2)
         pydirectinput.mouseUp(button="left")
 
-def moira():
+def moira(msg):
     # This is the LEFT_SHIFT ability
     if msg in ["ab1", "shift"]:
         HoldAndReleaseKey(LEFT_SHIFT, 0.5)
@@ -825,7 +825,7 @@ def moira():
         time.sleep(2)
         pydirectinput.mouseUp(button="left")
 
-def zenyatta():
+def zenyatta(msg):
     # This is the LEFT_SHIFT ability
     if msg in ["ab1", "shift"]:
         HoldAndReleaseKey(LEFT_SHIFT, 0.5)

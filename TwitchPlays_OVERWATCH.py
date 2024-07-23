@@ -5,7 +5,8 @@ import pydirectinput
 import pyautogui
 import TwitchPlays_Connection
 from TwitchPlays_KeyCodes import *
-import DetectImage.py
+import DetectImage.py as DI
+import HeroControl.py as HC
 
 ##################### GAME VARIABLES #####################
 
@@ -76,10 +77,33 @@ def handle_message(message):
         # I've added some example videogame logic code below:
 
         ###################################
-        # This is just for soldier 76
+        # Change controls for each hero
         ###################################
+        
+        control_map = {
+            'dva': HC.dva(),
+            'doomfist': HC.doomfist(),
+            'junkerqueen': HC.junkerqueen(),
+            'mauga': HC.mauga(),
+            'orisa': HC.orisa(),
+            'ramattra': HC.ramattra(),
+            'reinhardt': HC.reinhardt(),
+            'roadhog': HC.roadhog(),
+            'sigma': HC.sigma(),
+            'winston': HC.winston(),
+            'wreckingball': HC.wreckingball(),
+            'zarya': HC.zarya(),
+        }
 
+        hero = ""
 
+        if keyboard.is_pressed("end"):
+            hero = DI.getHero()
+
+        if hero in control_map:
+            control_map[hero](msg)
+        else
+            print("HERO NOT FOUND")
 
         ####################################
         ####################################
