@@ -2,6 +2,7 @@ import random
 import keyboard
 import pydirectinput
 import pyautogui
+from TwitchPlays_KeyCodes import *
 
 def moveAround(msg):
     # If the chat message is "left", then hold down the A key for 2 seconds
@@ -59,7 +60,7 @@ def moveAround(msg):
     if msg == "punch":
         HoldAndReleaseKey(J, 1)
 
-    if msg == "interact"
+    if msg == "interact":
         HoldAndReleaseKey(G, 1)
 
 def lookAround(msg):

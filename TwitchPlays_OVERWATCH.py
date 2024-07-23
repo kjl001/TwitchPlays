@@ -5,8 +5,8 @@ import pydirectinput
 import pyautogui
 import TwitchPlays_Connection
 from TwitchPlays_KeyCodes import *
-import DetectImage.py as DI
-import HeroControl.py as HC
+import DetectImage as DI
+import HeroControl as HC
 
 ##################### GAME VARIABLES #####################
 
@@ -47,6 +47,9 @@ pyautogui.FAILSAFE = False
 
 ##########################################################
 
+# The hero selected
+hero = ""
+
 # Count down before starting, so you have time to load up the game
 countdown = 5
 while countdown > 0:
@@ -81,28 +84,30 @@ def handle_message(message):
         ###################################
         
         control_map = {
-            'dva': HC.dva(),
-            'doomfist': HC.doomfist(),
-            'junkerqueen': HC.junkerqueen(),
-            'mauga': HC.mauga(),
-            'orisa': HC.orisa(),
-            'ramattra': HC.ramattra(),
-            'reinhardt': HC.reinhardt(),
-            'roadhog': HC.roadhog(),
-            'sigma': HC.sigma(),
-            'winston': HC.winston(),
-            'wreckingball': HC.wreckingball(),
-            'zarya': HC.zarya(),
+            'dva': HC.dva,
+            'doomfist': HC.doomfist,
+            'junkerqueen': HC.junkerqueen,
+            'mauga': HC.mauga,
+            'orisa': HC.orisa,
+            'ramattra': HC.ramattra,
+            'reinhardt': HC.reinhardt,
+            'roadhog': HC.roadhog,
+            'sigma': HC.sigma,
+            'winston': HC.winston,
+            'wreckingball': HC.wreckingball,
+            'zarya': HC.zarya,
         }
 
-        hero = ""
-
-        if keyboard.is_pressed("end"):
+        global hero
+        if msg == "swap":
             hero = DI.getHero()
+            print("HERO SWAPPED: " + hero)
 
         if hero in control_map:
             control_map[hero](msg)
-        else
+            HC.lookAround(msg)
+            HC.moveAround(msg)
+        else:
             print("HERO NOT FOUND")
 
         ####################################

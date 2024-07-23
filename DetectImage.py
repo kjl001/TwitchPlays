@@ -17,6 +17,6 @@ def getHero():
 		try:
 			search = py.locateOnScreen("images\\" + image, confidence=0.7)
 			print("IMAGE FOUND")
-			return image.replace(".png", "")
+			return image.removesuffix(".png")
 		except py.ImageNotFoundException:
 			print("IMAGE NOT FOUND")
