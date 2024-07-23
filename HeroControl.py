@@ -406,6 +406,9 @@ def genji():
         pydirectinput.mouseDown(button="left")
         time.sleep(0.5)
         pydirectinput.mouseUp(button="left")
+    if msg == "double jump":
+        HoldAndReleaseKey(SPACE, 0.5)
+        HoldAndReleaseKey(SPACE, 0.5)
 
 def hanzo():
     # This is the LEFT_SHIFT ability
@@ -636,6 +639,203 @@ def widowmaker():
     if msg == "aim down":
         pydirectinput.mouseDown(button="right")
     if msg == "aim out":
+        pydirectinput.mouseUp(button="right")
+    # Press the left mouse button down for 1 second, then release it
+    if msg == "shoot": 
+        pydirectinput.mouseDown(button="left")
+        time.sleep(2)
+        pydirectinput.mouseUp(button="left")
+
+
+
+######################################
+# SUPPORT HEROES
+######################################
+def ana():
+    # This is the LEFT_SHIFT ability
+    if msg in ["ab1", "shift"]:
+        HoldAndReleaseKey(LEFT_SHIFT, 0.5)
+    # This is the E ability
+    if msg in ["ab2", "e"]:
+        HoldAndReleaseKey(E, 0.5)
+    # This is the RIGHT CLICK ability
+    if msg == "aim down":
+        pydirectinput.mouseDown(button="right")
+    if msg == "aim out":
+        pydirectinput.mouseUp(button="right")
+    # Press the left mouse button down for 1 second, then release it
+    if msg == "shoot": 
+        pydirectinput.mouseDown(button="left")
+        time.sleep(2)
+        pydirectinput.mouseUp(button="left")
+
+def baptiste():
+    # This is the LEFT_SHIFT ability
+    if msg in ["ab1", "shift"]:
+        HoldAndReleaseKey(LEFT_SHIFT, 0.5)
+    # This is the E ability
+    if msg in ["ab2", "e"]:
+        HoldAndReleaseKey(E, 0.5)
+    # This is the RIGHT CLICK ability
+    if msg in ["ab3", "right click"]:
+        pydirectinput.mouseDown(button="right")
+        time.sleep(0.5)
+        pydirectinput.mouseUp(button="right")
+    # Press the left mouse button down for 1 second, then release it
+    if msg == "shoot": 
+        pydirectinput.mouseDown(button="left")
+        time.sleep(2)
+        pydirectinput.mouseUp(button="left")
+    # SUPER JUMP
+    if msg == "super jump":
+        HoldAndReleaseKey(LEFT_CONTROL, 1.5)
+        HoldAndReleaseKey(SPACE, 0.5)
+
+def brigitte():
+    # This is the LEFT_SHIFT ability
+    if msg in ["ab1", "shift"]:
+        HoldAndReleaseKey(LEFT_SHIFT, 0.5)
+    # This is the E ability
+    if msg in ["ab2", "e"]:
+        HoldAndReleaseKey(E, 0.5)
+    # This is the RIGHT CLICK ability
+    if msg in ["ab3", "right click"]:
+        pydirectinput.mouseDown(button="right")
+        time.sleep(0.5)
+        pydirectinput.mouseUp(button="right")
+    # Press the left mouse button down for 1 second, then release it
+    if msg == "shoot": 
+        pydirectinput.mouseDown(button="left")
+        time.sleep(2)
+        pydirectinput.mouseUp(button="left")
+    # This is the RIGHT CLICK ability
+    if msg == "shield up":
+        pydirectinput.mouseDown(button="right")
+    if msg == "shield down":
+        pydirectinput.mouseUp(button="right")
+
+def illari():
+    # This is the LEFT_SHIFT ability
+    if msg in ["ab1", "shift"]:
+        HoldAndReleaseKey(LEFT_SHIFT, 0.5)
+    # This is the E ability
+    if msg in ["ab2", "e"]:
+        HoldAndReleaseKey(E, 0.5)
+    # This is the RIGHT CLICK ability
+    if msg in ["ab3", "right click"]:
+        pydirectinput.mouseDown(button="right")
+        time.sleep(2)
+        pydirectinput.mouseUp(button="right")
+    # Press the left mouse button down for 1 second, then release it
+    if msg == "shoot": 
+        pydirectinput.mouseDown(button="left")
+        time.sleep(2)
+        pydirectinput.mouseUp(button="left")
+
+def kiriko():
+    # This is the LEFT_SHIFT ability
+    if msg in ["ab1", "shift"]:
+        HoldAndReleaseKey(LEFT_SHIFT, 0.5)
+    # This is the E ability
+    if msg in ["ab2", "e"]:
+        HoldAndReleaseKey(E, 0.5)
+    # This is the RIGHT CLICK ability
+    if msg in ["ab3", "right click"]:
+        pydirectinput.mouseDown(button="right")
+        time.sleep(2)
+        pydirectinput.mouseUp(button="right")
+    # Press the left mouse button down for 1 second, then release it
+    if msg == "shoot": 
+        pydirectinput.mouseDown(button="left")
+        time.sleep(2)
+        pydirectinput.mouseUp(button="left")
+
+def lifeweaver():
+    # This is the LEFT_SHIFT ability
+    if msg in ["ab1", "shift"]:
+        HoldAndReleaseKey(LEFT_SHIFT, 0.5)
+    # This is the E ability
+    if msg in ["ab2", "e"]:
+        HoldAndReleaseKey(E, 0.5)
+    # This is the RIGHT CLICK ability
+    if msg in ["ab3", "right click"]:
+        pydirectinput.mouseDown(button="right")
+        time.sleep(2)
+        pydirectinput.mouseUp(button="right")
+    # Press the left mouse button down for 1 second, then release it
+    if msg == "shoot": 
+        pydirectinput.mouseDown(button="left")
+        time.sleep(2)
+        pydirectinput.mouseUp(button="left")
+    if msg == "double jump":
+        HoldAndReleaseKey(SPACE, 0.5)
+        HoldAndReleaseKey(SPACE, 0.5)
+
+def lucio():
+    # This is the LEFT_SHIFT ability
+    if msg in ["ab1", "shift"]:
+        HoldAndReleaseKey(LEFT_SHIFT, 0.5)
+    # This is the E ability
+    if msg in ["ab2", "e"]:
+        HoldAndReleaseKey(E, 0.5)
+    # This is the RIGHT CLICK ability
+    if msg in ["ab3", "right click"]:
+        pydirectinput.mouseDown(button="right")
+        time.sleep(0.5)
+        pydirectinput.mouseUp(button="right")
+    # Press the left mouse button down for 1 second, then release it
+    if msg == "shoot": 
+        pydirectinput.mouseDown(button="left")
+        time.sleep(2)
+        pydirectinput.mouseUp(button="left")
+
+def mercy():
+    # This is the LEFT_SHIFT ability
+    if msg in ["ab1", "shift"]:
+        HoldAndReleaseKey(LEFT_SHIFT, 0.5)
+    # This is the E ability
+    if msg in ["ab2", "e"]:
+        HoldAndReleaseKey(E, 0.5)
+    # This is the RIGHT CLICK ability
+    if msg in ["ab3", "right click"]:
+        pydirectinput.mouseDown(button="right")
+        time.sleep(0.5)
+        pydirectinput.mouseUp(button="right")
+    # Press the left mouse button down for 1 second, then release it
+    if msg == "shoot": 
+        pydirectinput.mouseDown(button="left")
+        time.sleep(2)
+        pydirectinput.mouseUp(button="left")
+
+def moira():
+    # This is the LEFT_SHIFT ability
+    if msg in ["ab1", "shift"]:
+        HoldAndReleaseKey(LEFT_SHIFT, 0.5)
+    # This is the E ability
+    if msg in ["ab2", "e"]:
+        HoldAndReleaseKey(E, 0.5)
+    # This is the RIGHT CLICK ability
+    if msg in ["ab3", "right click"]:
+        pydirectinput.mouseDown(button="right")
+        time.sleep(2)
+        pydirectinput.mouseUp(button="right")
+    # Press the left mouse button down for 1 second, then release it
+    if msg == "shoot": 
+        pydirectinput.mouseDown(button="left")
+        time.sleep(2)
+        pydirectinput.mouseUp(button="left")
+
+def zenyatta():
+    # This is the LEFT_SHIFT ability
+    if msg in ["ab1", "shift"]:
+        HoldAndReleaseKey(LEFT_SHIFT, 0.5)
+    # This is the E ability
+    if msg in ["ab2", "e"]:
+        HoldAndReleaseKey(E, 0.5)
+    # This is the RIGHT CLICK ability
+    if msg in ["ab3", "right click"]:
+        pydirectinput.mouseDown(button="right")
+        time.sleep(3)
         pydirectinput.mouseUp(button="right")
     # Press the left mouse button down for 1 second, then release it
     if msg == "shoot": 
