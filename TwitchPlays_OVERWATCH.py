@@ -142,11 +142,11 @@ while True:
         exit()
 
     # When END is pressed, check what hero is being played and swap
-    global hero
     if keyboard.is_pressed("end"):
         hero = DI.getHero()
-        print("HERO SWAPPED: " + hero)
-
+        if hero != None:
+            print("HERO SWAPPED: " + hero)
+        
     if not messages_to_handle:
         continue
     else:
